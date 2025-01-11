@@ -36,6 +36,8 @@ install_chromium() {
             -v /root/chromium/config:/config \
             --shm-size="1gb" \
             --restart unless-stopped \
+            --enable-unsafe-webgpu \
+            --enable-features=Vulkan \
             lscr.io/linuxserver/chromium:latest
         echo "------------------------------------------------------------------------------------------------"
         echo "Chromium installed successfully."
